@@ -3,9 +3,9 @@ import sys
 import pprint
 from Prepender import *
 
-if len(sys.argv) != 2:
-    print('usage: ' + sys.argv[0] + ' <extension-folder-name>')
-    sys.exit()
+# if len(sys.argv) != 2:
+#     print('usage: ' + sys.argv[0] + ' <extension-folder-name>')
+#     sys.exit()
 
 pp = pprint.PrettyPrinter(indent=2)
 
@@ -128,8 +128,8 @@ empty_keys = [k for k, v in db.items() if not v]
 for k in empty_keys:
     del db[k]
 
-folder = sys.argv[1]
-extFilename = folder + '/db/data.js'
+# folder = sys.argv[1]
+extFilename = '/Data/data.js'
 with open(extFilename, 'w') as outfile:
     json.dump(db, outfile)
 
